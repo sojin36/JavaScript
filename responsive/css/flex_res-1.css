@@ -1,0 +1,44 @@
+@import url(reset.css);
+.container{
+    width: 90%;
+    max-width: 700px;
+    min-width: 290px;
+    padding: 3%;
+    margin: auto;
+    background-color: mediumaquamarine;
+}
+.card li{
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    margin-bottom: 2%;
+}
+.card li:last-child{
+    margin-bottom: 0;
+}
+
+/* 이미지 영역 */
+.img-box,
+.card-txt{
+    width: 50%;
+}
+@media (max-width: 768px){
+    .card-txt h3{
+        font-size: 16px;
+    }
+    .card-txt p{
+        font-size: 14px;
+    }
+}
+@media (max-width : 480px){
+    .card li{
+        flex-direction: column;
+    }
+    .img-box,
+    .card-txt{
+        width: 100%;
+    }
+    .card-txt{
+        padding: 2%;
+    }
+}

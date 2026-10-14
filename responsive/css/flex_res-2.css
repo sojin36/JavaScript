@@ -1,0 +1,36 @@
+@import url(reset.css);
+.container{
+    width: 90%;
+    max-width: 1200px;
+    min-width: 290px;
+    margin: 50px auto;
+    padding: 3%;
+    background-color: paleturquoise;
+}
+.card-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: palegreen;
+}
+.card-list li{
+    width: calc((100%-50px) / 6);
+    padding: 3%;
+    background-color: plum;
+}
+@media (max-width : 768px){
+    .card-list li{
+    width: calc((100%-30px) / 4);
+}
+}
+@media (max-width : 480px){
+    .card-list li{
+    width: calc((100%-10px) / 2);
+}
+}
+@media (max-width : 390px){
+    .card-list li{
+    width: 100%;
+}
+}
+/*  */

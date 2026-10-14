@@ -1,0 +1,25 @@
+@import url(reset.css);
+body{
+    background-color: mediumturquoise;
+}
+.box{
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    min-width: 250px;
+}
+h1{
+    display: none;
+    font-size: 8vw;
+}
+@media (max-width : 768px){
+    h1{
+        display: block;
+    }
+}
+@media (max-width : 390px) {
+    .box{
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}

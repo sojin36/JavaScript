@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현재 시간</title>
+</head>
+<body>
+    <p>현재 시각: <strong class="display">
+        <!-- js출력 -->
+    </strong></p>
+    <script>
+        // 현재 시간을 나타내는 함수
+        function displayNow(){
+            // console.log("확인");
+            let now = new Date();
+            const currentTime = now.toLocaleTimeString();
+            // console.log(currentTime);
+            const display = document.querySelector(".display");
+            display.innerHTML = `${currentTime}`;
+
+        }
+        // 함수 호출
+        // displayNow();
+        // setInterval(); : 일정시간 간격으로 반복 실행하는 함수
+        setInterval(displayNow, 1000);
+    </script>
+</body>
+</html>

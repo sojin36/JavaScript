@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach</title>
+</head>
+<body>
+    <script>
+        const fruits = ["사과", "딸기", "포도", "망고", "수박"];
+        console.log(fruits);
+        fruits.forEach((fruits, index)=>{
+            console.log(fruits);
+            console.log(index); 
+
+            document.write(`<p>${index +1} : ${fruits}</p>`)
+        });
+    </script>
+</body>
+</html>

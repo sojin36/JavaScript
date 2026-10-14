@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+<body>
+    <!-- 객체 : 여러가지 정보를 하나로 묶어 놓은 것 -->
+    <!-- 내장 객체 : 자바스크립트가 미리 만들어 놓은 객체 -->
+    <!-- Date, Array, String, Math -->
+    <script>
+        // 1. String
+        const str = "Hello world";
+        console.log(str);
+        console.log(str.length); // 문자의 길이를 알 수 있는 속성
+        console.log(str.toUpperCase()); // 대문자로 변경하는 메서드
+        console.log(str.includes("world")); // 해당하는 내용이 있는지 없는지 확인하는 메서드
+
+        // 2. Array
+        const arr = [1, 2, 3, 4];
+        console.log(arr);
+        console.log(arr.length);
+        console.log(arr.push(5));
+        console.log(arr); // [1, 2, 3, 4, 5]
+        console.log(arr.join("/"));
+
+        // 3. Date
+        const today = new Date()
+        console.log(today);
+        console.log(today.getMonth()+1); // 현재 날짜
+        console.log(today.toDateString());
+        console.log(today.toLocaleDateString());
+        console.log(today.getFullYear());
+
+        // 4.Math
+        console.log(Math.PI); // 3.1415926
+        console.log(Math.max(10, 23, 100, 50));
+        console.log(Math.min(10, 23, 100, 50));
+        console.log(Math.random()); // 0~1 사이 난수
+    </script>
+</body>
+</html>
