@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="colorBtn">색 변경</button>
+    <script>
+        // 색 변경 함수
+        function changeColor(){
+            document.body.style.backgroundColor = "skyblue";
+        }
+        // changeColor() // 바로 함수 실행됨!
+        // document.querySelector("#colorBtn").addEventListener("") // 방법 1
+        const colorBtn = document.querySelector("#colorBtn")
+        colorBtn.addEventListener("click", changeColor);
+    </script>
+</body>
+</html>

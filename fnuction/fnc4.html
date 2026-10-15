@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="이름?">
+    <button id="showBtn">확인</button>
+    <p id="result">
+        <!-- js출력 -->
+    </p>
+    <script>
+        const name = document.querySelector("#name")
+        const showBtn = document.querySelector("#showBtn")
+        const result= document.querySelector("#result")
+
+        // 사용자가 입력한 이름을 받아오는 함수
+        function showName(name){
+            result.textContent = `hi ${name}입니다`;
+        }
+        showBtn.addEventListener("click", ()=>{
+
+            let userName = name.value;
+            showName(userName);
+
+            // input 초기화
+            name.value =""
+
+        });
+    </script>
+</body>
+</html>

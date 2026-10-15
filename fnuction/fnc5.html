@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="menuBtn1">메뉴1</button>
+    <button id="menuBtn2">메뉴2</button>
+    <button id="menuBtn3">메뉴3</button>
+    <div id="menu1" style="display: none;">메뉴 내용 1</div>
+    <div id="menu2" style="display: none;">메뉴 내용 1</div>
+    <div id="menu3" style="display: none;">메뉴 내용 1</div>
+    <script>
+        // 메뉴 보이게 하는 함수
+        function toggleMenu(id){
+            let menu = document.getElementById(id)
+            if(menu.style.display === "none"){
+                menu.style.display = "block"
+            }else{
+                menu.style.display = none;
+            }
+        }
+        const menuBtn1 = document.getElementById("menuBtn1")
+        const menuBtn2 = document.getElementById("menuBtn2")
+        const menuBtn3 = document.getElementById("menuBtn3")
+        menuBtn1.addEventListener("click", ()=>{
+            toggleMenu("menu1")
+        });
+        menuBtn2.addEventListener("click", ()=>{
+            toggleMenu("menu2");
+        });
+    </script>
+</body>
+</html>

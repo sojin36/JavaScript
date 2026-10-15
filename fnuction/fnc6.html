@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .submenu{
+           
+        }
+        .submenu.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <button class="menu">메뉴1</button>
+    <ul class="submenu">
+        <li>서브메뉴1</li>
+        <li>서브메뉴2</li>
+    </ul>
+    <script>
+        const menu = document.querySelector(".menu")
+        const submenu = document.querySelector(".submenu");
+        menu. addEventListener("click", function(){
+            submenu.classList.toggle("show");
+        });
+        
+    </script>
+</body>
+</html>

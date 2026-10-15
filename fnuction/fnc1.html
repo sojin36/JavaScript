@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button style="color: palevioletred;" onclick="sayH1()">클릭</button><br>
+    <button onclick="alert()">알림창 클릭</button><br>
+    <script>
+        function sayH1(){
+            console.log("안녕");
+        }
+        function greet(name, age){
+            console.log("확인");
+            document.write(`${name}님 나이는 ${age} 환영합니다. <br>`)
+        }
+        greet("최재헌" , 21)
+        greet("소진", 24)
+    </script>
+</body>
+</html>

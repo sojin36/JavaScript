@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="prodouctList">
+        <!-- js 출력 -->
+    </ul>
+    <script>
+        const proList = document.querySelector("#prodouctList")
+        // 더미 데이터
+        const products = [
+            {name: "티셔츠", price: 500, desc: "곰도리티셔츠", img :"images/tshirt.jpg"},
+            {name: "바지", price: 1500, desc: "곰도리티셔츠"},
+            {name: "후드티", price: 2500, desc: "곰도리티셔츠"},
+            {name: "티셔츠", price: 45000, desc: "곰도리티셔츠"},
+        ];
+
+        products.forEach((item, index)=>{
+            console.log(item, index);
+            proList.innerHTML += `
+            <li>
+            <img src="${item.img}" alt="">
+            <h3>상품 이름 : ${item.name} </h3>
+            <p>상품 설명 : ${item.desc}</p>
+            <p>가격 : ${item.price} </p>
+            </li>`;
+        })
+    </script>
+</body>
+</html>
