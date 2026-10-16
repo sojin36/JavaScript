@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <style>
+        .box{
+            width: 100px;
+            background-color: mediumaquamarine;
+            height: 100px;
+        }
+        .box.active{
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. 이벤트 연결 -->
+    <button id="btn">눌러보세용</button>
+    <!-- 2. 입력 이벤트 -->
+    <input type="text" id="name" placeholder="이름 입력">
+    <!-- 3. form 제출 이벤트 -->
+    <form id="myform">
+        <input id="userEamil" type="text" placeholder="이메일 입력">
+        <button type="submit">제출</button>
+    </form>
+    <!-- 4. 마우스 이벤트 -->
+     <div class="box"></div>
+    <!-- 5. 키보드 이벤트 -->
+    <input type="text" id="KeyInput" placeholder="아무 키나 눌러">
+    
+    <script>
+        // 1. 이벤트 연결
+        const btn = document.querySelector("#btn")
+        btn.addEventListener("click", ()=>{
+            btn.style.color = "pink"
+        });
+
+        // 2. 입력 이벤트
+        const name = document.querySelector("#name")
+        name.addEventListener("input", ()=>{  
+        })
+
+        // 3. form 제출 이벤트
+        const form = document.querySelector("#myform")
+        // preventDefault() : 원래 행동을 막아주는 메서드
+        form.addEventListener("submit", (event)=>{
+            event.preventDefault()
+            document.write(`${userEamil.value}`);
+        })
+
+        // 4. 마우스 이벤트
+        const box = document.querySelector(".box")
+        box.addEventListener("mouseover", ()=>{
+            box.style.backgroundColor = "orange";
+        });
+        box.addEventListener("mouseout", ()=>{
+            box.style.backgroundColor = "skyblue";
+        });
+
+        // 5. 키보드 이벤트
+        const KeyInput = document.querySelector("#KeyInput0")
+        KeyInput.addEventListener("keydown", (event)=>{
+
+        })
+
+        // 6. 페이지 로드 이벤트
+        window.addEventListener("load", ()=>{
+            
+        })
+
+        // 7. 화면 리사이즈 이벤트
+        window.addEventListener("resize", ()=>{
+            // 화면이 사이즈가 600px보다 크면
+            if(window.innerWidth < 600){
+                box.
+            }
+        });
+    </script>
+</body>
+</html>

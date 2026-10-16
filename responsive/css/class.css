@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contain{
+    position: relative;
+    width: 500px;
+    padding: 20px;
+    margin: 100px auto;
+    background-color: pink;
+}
+.contain img{
+    width: 100%;
+}
+.over{
+    padding: 10px;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.over:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+.contain > .over{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+/* 상세 설명 보기 */
+.detail{
+    display: none;
+    padding: 20px;
+    background-color: antiquewhite;
+}
+.detail p{
+    margin-bottom: 10px;
+}
+.detail .over{
+    display: block;
+    margin-left: auto;
+}

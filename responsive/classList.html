@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin: 300px;
+            padding: 30px;
+            margin-bottom: 20px;
+            background-color: pink;
+        }
+        .skyblue{
+            background-color: skyblue;
+            color: #fff;
+        }
+        .green{
+            background-color: green;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="myBox">안녕하세요!</div>
+    <button id="addBtn">하늘색 추가</button>
+    <button id="removeBtn">하늘색 삭제</button>
+    <button id="toggleBtn">초록색 더하고 / 삭제</button>
+    <button id="cheackBtn">하늘색 확인</button>
+    <script>
+        // HTML에서 요소를 가져오기
+        const box = document.querySelector("#myBox")
+        // 추가 버튼
+        const addBtn = document.querySelector("#addBtn");
+        addBtn.addEventListener("click", ()=>{
+            box.classList.add("skyblue");
+        });
+        const removeBtn = document.querySelector("#removeBtn");
+        removeBtn.addEventListener("click", ()=>{
+            box.classList.remove("skyblue");
+        });
+
+        // 더하고 삭제
+        const toggleBtn = document.querySelector("#toggleBtn");
+        toggleBtn.addEventListener("click", ()=>{
+            box.classList.toggle("green");
+        });
+
+        // 클래스 있는지 없는지 확인
+        const cheackBtn = document.querySelector("#cheackBtn");
+        cheackBtn.addEventListener("click", ()=>{
+            if(box.classList.contains("skyblue")){
+                box.classList.remove("skyblue")
+            }else{
+                box.classList.add("green")
+            }
+        });
+    </script>
+</body>
+</html>
