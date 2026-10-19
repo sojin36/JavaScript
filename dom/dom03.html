@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 속성 가져오거나 수정하기 메서드 -->
+    <a href="https://www.naver.com"></a>
+    <script>
+        // 속성 가져오는 메서드
+        // 기본형 getAttribute("속성명")
+    const aEl = document.querySelector("a")
+    const hrefE = aEl.getAttribute("href")
+        // 속성을 수정하는 메서드
+        // 기본형 : setAttribute("속성명" , "바꿀 값")
+    aEl.setAttribute("href", "https://www.google.com")
+    aEl.innerText = "구글";
+    aEl.setAttribute("target", "_blank");
+    aEl.setAttribute("title", "구글로 이동");
+    aEl.setAttribute("class", "link");
+    aEl.setAttribute("id", "google_link");
+
+    </script>
+</body>
+</html>

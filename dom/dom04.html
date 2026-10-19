@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="images/easys-1.jpg" alt="이미지" id="cover">
+    <script>
+        const cover = document.querySelector("#cover")
+        cover.addEventListener("mouseover", ()=>{
+            cover.src = "images/easys-2.jpg"
+            cover.id = "cover2"
+        });
+        cover.addEventListener("mouseout", ()=>{
+            cover.src = "images/easys-1.jpg"
+            cover.id = "cover1"
+        })
+    </script>
+</body>
+</html>

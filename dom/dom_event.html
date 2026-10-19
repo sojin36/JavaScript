@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>제품소개</li>
+        <li>고객센터</li>
+        <li>회사소개</li>
+    </ul>
+    <div id="result">
+        <!-- 내가 클릭한 글자 js 출력 -->
+        
+    </div>
+    <script>
+        const munuE = document.getElementById("menu");
+        const result = document.getElementById("result");
+        munuE.addEventListener("click", (e)=>{
+            result.innerHTML = `<p>내가 클릭한 메뉴 : <span>${e.target.innerHTML}</span></p>`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .todo{
+            cursor: pointer;
+        }
+        .todo.completed{
+            color: pink;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <h2>오늘 할 일</h2>
+    <ul>
+            <li class="todo"><input type="checkbox">청소하기</li>
+            <li class="todo"><input type="checkbox">장보기</li>
+            <li class="todo"><input type="checkbox">운동하기</li>
+            <li class="todo"><input type="checkbox">공부하기</li>
+    </ul>
+    <script>
+        const todos = document.querySelectorAll(".todo")
+        todos.forEach((todo, index)=>{
+            // console.log(todo, index);
+            const checkbox = todo.querySelector("input");
+            checkbox.addEventListener("change", ()=>{
+                if(checkbox.checked){
+                    todo.classList.add("completed")
+                } else{
+                    todo.classList.remove("completed");
+
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom - 요소생성</title>
+</head>
+<body>
+    <div id="container">
+        <h1>웹 프로그래밍</h1>
+        <!-- p태그 생성 -->
+        <!-- js생성 -->
+    </div>
+    <div class="notice">
+        <!-- span안에 글자 안녕하세요 -->
+        <!-- <span>안녕하세요</span> -->
+
+    </div>
+    <script>
+        // p태그 생성
+        const newP = document.createElement("p")
+        const txtNode = document.createTextNode(
+            "DOM은 document object model의 "
+        );
+
+        // p태그에 글자를 넣는다
+        newP.appendChild(txtNode)
+        // container 영역안에 p태그를 연결
+        document.querySelector("#container").appendChild(newP);
+
+
+        //span 태그 생성, 글자 안녕하세요 생성
+        //notice 안에 span태그 추가
+        const newQ = document.createElement("span")
+        const txt = document.createTextNode(
+            "안녕하세요"
+        );
+    </script>
+</body>
+</html>
