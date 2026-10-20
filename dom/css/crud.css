@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,li{
+    list-style: none;
+}
+body{
+    padding: 40px 20px;
+    background-color: #f4f6f9;
+}
+
+/* 가운데 카드 */
+.container{
+    width: 90%;
+    margin: auto;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+.container h1{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* 입력창 추가 버튼 */
+#taskform{
+    display: flex;
+    gap: 10px;
+}
+#taskinput{
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+}
+button{
+    padding: 10px 15px;
+    border: none;
+    background-color: palevioletred;
+    color: #fff;
+    cursor: pointer;
+}
+button:hover{
+    opacity: 0.8;
+}
+
+/* 목록 */
+#taskList li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    padding: 12px;
+    background-color: #f7f8fa;
+    border-radius: 6px;
+}
+.task-text{
+    flex: 1;
+}
+.task-text.done{
+    color: #999;
+    text-decoration: line-through;
+}
+/* 수정 및 삭제 버튼 */
+.actions{
+    display: flex;
+    gap: 5px;
+}
+.edit-btn{
+    background-color: skyblue;
+}
+.delete-btn{
+    background-color: paleturquoise;
+}
+/* 전체 갯수 */
+#count{
+    margin-top: 20px;
+    color: #666;
+    text-align: right;
+}
