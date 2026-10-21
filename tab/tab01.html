@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>탭 기능</title>
+    <style>
+      .tab-btn {
+        padding: 10px;
+        cursor: pointer;
+        border: 1px solid #26b4be;
+        background-color: rgb(177, 253, 253);
+      }
+      .tab-btn.active {
+        border-color: blueviolet;
+        background-color: rgb(221, 186, 255);
+      }
+      .tab-content {
+        display: none;
+        border: 1px solid #ccc;
+        padding: 15px;
+      }
+      .tab-content.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 탭 버튼 -->
+    <button class="tab-btn active">탭 1</button>
+    <button class="tab-btn">탭 2</button>
+    <button class="tab-btn">탭 3</button>
+    <!-- 탭 내용 -->
+    <div class="tab-content active">탭 1 내용</div>
+    <div class="tab-content">탭 2 내용</div>
+    <div class="tab-content">탭 3 내용</div>
+    <script>
+      const tabs = document.querySelectorAll(".tab-btn");
+      const contents = document.querySelectorAll(".tab-content");
+      
+     
+      tabs.forEach((tab, index) => {
+
+        tab.addEventListener("click", () => {
+          // 버튼 활성화 초기화
+          tabs.forEach((t) => {
+            
+            t.classList.remove("active");
+          });
+
+          // 내용 활성화 초기화
+          contents.forEach((c) => {
+            c.classList.remove("active");
+          });
+
+          // 해당하는 탭 활성화
+          tab.classList.add("active");
+
+          // 해당하는 내용 활성화
+          contents[index].classList.add("active");
+        });
+      });
+    //   tabs[1].classList.add("active")
+    //   contents[1].classList.add("active")
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter()</title>
+</head>
+<body>
+    <!-- filter() : 조건에 맞는 데이터만 골라내기 메서드 -->
+    <script>
+        const scores = [45, 80, 55, 90, 70];
+        const passed = scores.filter((score)=>{
+            return score >= 60;
+        });
+
+        // 5000원 이하인 상품만 고르기
+        const price = [3000, 8000, 5000, 12000, 4000]
+        const result = prices.filter(()=>{
+            return price <= 5000;
+        });
+    </script>
+</body>
+</html>

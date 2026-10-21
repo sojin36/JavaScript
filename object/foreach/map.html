@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map()</title>
+</head>
+<body>
+    <!-- map() 기존 데이터를 하나씩 꺼내서 다른 데이터로 바꾸고, 
+        새로운 배열로 만드는 메서드 -->
+    <script>
+        const prices = [1000, 2000, 3000];
+        const newPrices = prices.map((price)=>{
+            return price + 1000;
+        });
+
+        // 돌려받은 값들을 모아서 새 벼열로 만든다.
+        console.log(newPrices); //[2000, 3000, 4000]
+        const numbers = [1, 2, 3, 4];
+        const result = numbers.map((num)=>{
+            return num *2;
+        })
+    </script>
+</body>
+</html>
