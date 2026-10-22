@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- for 반복문 : 같은 코드를 여러 번 실행할 때 사용하는 반복문 -->
+    <script>
+        // for 기본형
+        // for (시작; 조건; 증가){
+        //      // 실행코드
+        // }
+
+        for(let i = 0; i<5; i++){
+
+        }
+        for(let i=1; 1<=10; i++){
+
+        }
+
+        // 1부터 10까지 더한 값 출력
+        let sum = 0;
+        for (let i=1; i<=10; i++){
+            sum += 1
+        }
+        document.write(sum)
+
+        // 안녕하세요 5번 출력
+        for(let i=1; i<=5; i++){
+            document.write(`안녕하세요 ${i} 반가워요 <br>`)
+        }
+
+        // 1~10 중에 짝수만 출력
+        for(let i=1; i<=10; i++){
+            if(i % 2 === 0){
+                document.write(`${i} (짝수) <br>`)
+            }
+        }
+        // 1~10 중에 홀수만 출력
+        for(let i=1; i<=10; i++){
+            if(i % 2 === 1){
+                document.write(`${i}`)
+            }
+        }
+
+        // 별찍기
+        for (let i=1; i<=5; i++){
+            document.write(`${"🤍"}`)
+        }
+        document.write("❤".repeat(5))
+    </script>
+</body>
+</html>

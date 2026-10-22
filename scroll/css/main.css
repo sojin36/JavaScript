@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+html{
+    scroll-behavior: smooth;
+}
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+}
+#home {
+    background-color: rgb(251, 207, 150);
+}
+#about {
+    background-color: rgb(195, 255, 209);
+}
+#skills {
+    background-color: rgb(181, 253, 255);
+}
+#project {
+    background-color: rgb(231, 150, 251);
+}
+#contact {
+    background-color: rgb(236, 251, 150);
+}
+
+/* 오른쪽 메뉴 */
+.side-nav{
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(225, 225, 225, 0.5);
+    padding: 20px;
+    border-radius: 30px;
+    gap: 15px;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+.dot{
+    width: 28px;
+    line-height: 28px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 13px;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+}
+.dot.active {
+    transform: scale(1.5);
+    border-color: #8b8b8b;
+}

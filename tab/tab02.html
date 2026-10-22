@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul,li{
+            list-style: none;
+        }
+        /* 메뉴 */
+        .menu{
+            width: 50%;
+            max-width: 600px;
+            display: flex;
+            margin: 50px auto;
+            background-color: pink;
+        }
+        .menu-item{
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            transition: all 0.3s;
+        }
+        .menu-item:hover, 
+        .menu-item.active{
+            background-color: palevioletred;
+            cursor: pointer;
+        }
+
+        /* 탭 내용 */
+        .card-container{
+            width: 60%;
+            max-width: 700px;
+            margin: auto;
+        }
+        .card{
+            /* display: flex; */
+            display: none;
+            gap: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .card.active{
+            display: flex;
+        }
+        .card li{
+            flex: 1;
+        }
+        .card img{
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 탭메뉴 -->
+    <div class="menu" id="menu">
+        <!-- js출력 -->
+    </div>
+    <!-- 카드 영역 -->
+    <div class="card-container" id="cardContainer">
+        <!-- js 출력 -->
+        <ul class="card">
+            <li>
+                <img src="" alt="">
+                <h2>이름</h2>
+                <p>가격 : 원</p>
+            </li>
+        </ul>
+    </div>
+    <script>
+        // 더미데이터
+         const menuData = [
+            {
+                title: "메뉴 1",
+                product: [
+                { image: "images/frame1.png", name: "아메카노", price: 6000 },
+                { image: "images/frame2.png", name: "카페라떼", price: 6500 },
+                { image: "images/frame3.png", name: "바닐라라떼", price: 7000 },
+                ],
+            },
+            {
+                title: "메뉴 2",
+                product: [
+                { image: "images/frame3.png", name: "카페라떼", price: 6500 },
+                { image: "images/frame4.png", name: "초콜릿", price: 5000 },
+                { image: "images/frame1.png", name: "아메카노", price: 6000 },
+                ],
+            },
+            {
+                title: "메뉴 3",
+                product: [
+                { image: "images/frame5.png", name: "카페라떼", price: 6500 },
+                { image: "images/frame3.png", name: "초콜릿", price: 5000 },
+                { image: "images/frame2.png", name: "아메카노", price: 6000 },
+                ],
+            },
+        ];
+
+        // html 요소 가져오기
+        const menu = document.querySelector("#menu")
+        const cardContainer = document.querySelector("#cardContainer");
+
+        // 탭 메뉴 만들기
+        menu.innerHTML = menuData.map((item, index)=>{
+            return ` <div class="menu-item ${index === 0 ? "active" : ""}">${item.title}</div>`
+        }).join("");
+
+        // 탭 내용 만들기
+        cardContainer.innerHTML = menuData.map((item, index)=>{
+            return `
+            <ul class="card">
+                ${item.product.map((product)=>{
+                    return `
+                    <li>
+                        <img src="${product.image}" alt="${product.name}">
+                        <h2>${product.name}</h2>
+                        <p>${product.price.toLocaleString()}</p>
+                    </li>
+                    `;
+                })}
+            </ul>`;
+        }).join("");
+
+        // 생성된 탭메뉴와 탭 내용 가져오기
+        const menuItem = document.querySelectorAll(".menu-item")
+        const cards = document.querySelectorAll(".card")
+
+        // 탭에 맞는 카드 보여주는 함수
+        function showCard(index){
+            // 모든 탭의 active 제거
+            menuItem.forEach((item)=>{
+                item.classList.remove("active")
+            })
+
+            // 모든 탭 내용의 active 제거
+            cards.forEach((card)=>{
+                card.classList.remove("active");
+            });
+
+            // 클릭한 탭과 같은 번호의 카드 활성화
+            menuItem[index].classList.add("active")
+            cards[index].classList.add("active");
+        }
+
+        // 탭 메뉴 클릭시
+        menuItem.forEach((item, index)=>{
+            item.addEventListener("click", ()=>{
+                showCard(index)
+            })
+        })
+    </script>
+</body>
+</html>

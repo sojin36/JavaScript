@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <!-- js출력 -->
+        
+    </ul>
+    <script>
+        const product = ["사과", "바나나", "포도", "딸기"]
+        const proList = document.querySelector("#list")
+        for(let i=0; i< product.length; i++){
+            proList.innerHTML += `<li>${product[i]}</li>`
+        }
+    </script>
+</body>
+</html>
