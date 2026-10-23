@@ -1,7 +1,22 @@
 window.addEventListener("scroll", ()=>{
     const sections = document.querySelectorAll("section")
     const dots = document.querySelectorAll(".dot")
-    
+
+    // goTop
+    const gotopBtn = document.querySelector("#goTop");
+    if(document.documentElement.scrollTop > 600){
+        gotopBtn.classList.add("active");
+    } else{
+        gotopBtn.classList.remove("active");
+    }
+
+    // goTop버튼 클릭시 함수
+    gotopBtn.addEventListener("click", ()=>{
+        window.scrollTo({
+            top:0, 
+        })
+    })
+
     sections.forEach((sections, index)=>{
         // 색션 영역이 화면 위쪽에서 얼마나 떨어져 있는지 학인
         // getBoundingClientRect() : 영역이 브라우저 화면의 맨 위에서 얼마나 떨여져있느지 확인

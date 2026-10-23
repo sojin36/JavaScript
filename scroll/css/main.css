@@ -18,6 +18,23 @@ section{
     font-size: 60px;
     font-weight: bold;
 }
+
+/* gotop */
+#goTop{
+    position: fixed;
+    bottom: 30px;
+    right: 38px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 0;
+    color: #fff;
+    background-color: #333;
+    padding: 10px;
+    cursor: pointer;
+}
+#goTop.active{
+    display: block;
+}
 #home {
     background-color: rgb(251, 207, 150);
 }

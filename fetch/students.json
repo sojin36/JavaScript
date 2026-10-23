@@ -1,0 +1,42 @@
+[
+  {
+    "id": "2026001",
+    "name": "김민수",
+    "major": "웹디자인",
+    "phone": "010-1234-5678",
+    "email": "minsu@test.com",
+    "image": "./images/people1.png"
+  },
+  {
+    "id": "2026002",
+    "name": "이지은",
+    "major": "영상편집",
+    "phone": "010-2222-3333",
+    "email": "jieun@test.com",
+    "image": "./images/people2.png"
+  },
+  {
+    "id": "2026003",
+    "name": "손예진",
+    "major": "UIUX디자인",
+    "phone": "010-4444-5555",
+    "email": "seojun@test.com",
+    "image": "./images/people3.png"
+  },
+  {
+    "id": "2026004",
+    "name": "최우식",
+    "major": "웹퍼블리셔",
+    "phone": "010-4444-5557",
+    "email": "seojun@test.com",
+    "image": "./images/people4.png"
+  },
+  {
+    "id": "2026005",
+    "name": "정유미",
+    "major": "UIUX디자인",
+    "phone": "010-4444-5556",
+    "email": "seojun@test.com",
+    "image": "./images/people5.png"
+  }
+]

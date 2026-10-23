@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result{
+            max-width: 1000px;
+            flex-wrap: wrap;
+            display: flex;
+            gap: 20px;
+            background-color: pink;
+        }
+        .card{
+            flex: 1;
+            background-color: plum;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>사용자 데이터 가져오기</h1>
+    <button id="loadBtn">데이터 가져오기</button>
+    <div id="result">
+        <!-- js출력 -->
+        </div>
+    </div>
+    <script>
+        const loadBtn = document.querySelector("#loadBtn");
+        const result = document.querySelector("#result");
+        loadBtn.addEventListener("click", ()=>{
+            fetch("https://jsonplaceholder.typicode.com/users")
+            .then((res)=>{
+                return res.json();
+            }).then((data)=>{
+                result.innerHTML = data.map((user)=>{
+                    return`
+                    <div class="card">
+                        <h2>이름</h2>
+                        <p><strong>아이디:${user.id}</strong></p>
+                        <p><strong>사용자명:${user.username}</strong></p>
+                        <p><strong>이메일:${user.email}</strong></p>
+                        <p><strong>전화번호:${user.phone}</strong></p>
+                        <p><strong>웹사이트:${user.website}</strong></p>
+                        <p><strong>주소:${user.address.city}</strong>
+                        도시 , 도로명, 호실
+                        </p>
+                        <p><strong>우편번호:</strong></p>
+                        <p><strong>회사:</strong></p>
+                    </div>`
+                })
+                .join("");
+            })
+            .catch((error)=>{
+
+            })
+        })
+    </script>
+</body>
+</html>
